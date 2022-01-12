@@ -94,6 +94,10 @@ main h1{
     font-size: 2em;
 }
 
+.circle button:hover {
+    cursor: unset;
+}
+
 /* .card p:hover{
     transform: scale(1.2,1.5);
 } */
