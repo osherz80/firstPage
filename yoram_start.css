@@ -1,7 +1,9 @@
 *{
     box-sizing: border-box;
 }
-
+ul::marker{
+    display: none;
+}
 body{
     margin: 0;
     font-family: sans-serif;
@@ -68,6 +70,28 @@ main h1{
     flex-direction: column;
 }
 
+.left p{
+    writing-mode: vertical-lr;
+    font-family: cursive;
+    font-size: 3em;
+    color: black;
+    text-shadow: 1px 1px 2px rgb(66, 66, 66), 0 0 25px rgb(116, 116, 116), 0 0 5px rgb(188, 188, 189);
+    position: relative;
+    left: 30px;
+    animation-name: leftBox;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count:infinite ;
+    /* animation-delay:2s ; */
+}
+
+@keyframes leftBox{
+0%{top: 0px;}
+/* 25%{top: 60px;}
+50%{top: 120px;} */
+100%{left: 30px; transform: rotate(-130deg); top: 200px;}
+}
+
 .box{
     margin: 0 1.5%;
     width: 22%;
@@ -87,20 +111,31 @@ main h1{
     background: white;
     margin: auto 0;
     text-align: center;
+    transition: width , 0.5s;
 }
 
 .card:hover{  
     transform: scale(1.2,1.2);
-    font-size: 2em;
+    /* width: 100px; */
 }
 
-.circle button:hover {
-    cursor: unset;
+.circle button:hover{
+    cursor: pointer;
+}
+.cardName :hover{
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
-/* .card p:hover{
-    transform: scale(1.2,1.5);
-} */
+.cardName{
+    padding-top: 10px;
+    transition: text, 5s;
+}
+
+.cardBody ul{
+    padding-inline-start: 0px;
+
+}
 
 .circle button{
     width: 40px;
@@ -204,7 +239,7 @@ display: none;
 }
     .nav_space{
         height: inherit;
-        width: 180px;
+        width: 70%;
     }
 
     main {
@@ -216,6 +251,16 @@ display: none;
         height: 60px;
         width: 80%;
         margin: 10px auto;
+    }
+
+    .left p{
+        writing-mode: horizontal-tb;
+        font-size: 1.5em;
+        top: -15px;
+    }
+
+    @keyframes leftBox {
+        100%{left:auto;}
     }
 
     .left{
