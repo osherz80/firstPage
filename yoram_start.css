@@ -260,7 +260,7 @@ display: none;
     }
 
     @keyframes leftBox {
-        100%{left:400px;}
+        100%{left:200px;}
     }
 
     .left{
