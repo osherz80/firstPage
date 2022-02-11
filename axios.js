@@ -1,6 +1,6 @@
 //https://axios-http.com/docs/intro
 
-axios.get('http://data.nba.net/data/10s/prod/v1/2019/players.json')
+axios.get('https://data.nba.net/data/10s/prod/v1/2019/players.json')
   .then(function (response) {
     let randomIndex = [52,230,145,67];
     let players = response.data.league.standard;
